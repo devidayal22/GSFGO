@@ -55,7 +55,7 @@ func LiveCarbonIntensity(params TypCarbonQueryParams) (ci CarbonIntensity) {
 	} else if strings.ToLower(params.CarbonRateProvider) == "watttime" {
 
 		live, recent := Watttime(TypCarbonQueryParams{WattTimeUser: params.WattTimeUser, WattTimePass: params.WattTimePass}, zone)
-		fmt.Println("devi dayal" + live.Moer)
+		fmt.Println("devi dayal" + " h" + params.WattTimeUser)
 		if live != nil {
 			ci.LiveCarbonIntensity, _ = strconv.ParseFloat(live.Moer, 64)
 		}
