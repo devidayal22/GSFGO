@@ -85,6 +85,7 @@ func GetTimeRange() (starttime, endtime string) {
 func Watttime(params TypCarbonQueryParams, BA string) (*WT.RealTimeEmissionsIndexResp, *[]WT.GridEmissionsDataResp) {
 
 	WT.Login(params.WattTimeUser, params.WattTimePass)
+	fmt.Println("devi dayal" + " w" + params.WattTimeUser)
 	starttime, endtime := GetTimeRange()
 
 	live, _ := WT.RealTimeEmissionsIndex(BA, 0, 0, "")
