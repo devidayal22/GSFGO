@@ -67,8 +67,9 @@ func main() {
 }
 
 func getCarbonIntensity(param pa.TypCarbonQueryParams) float64 {
-	fmt.Println("devi dayal" + param.IacLocation)
+
 	x := pa.LiveCarbonIntensity(param)
+	fmt.Println(x.LiveCarbonIntensity)
 	return x.LiveCarbonIntensity
 }
 
