@@ -49,7 +49,7 @@ func main() {
 					qry.Location = D.Location
 					averageKwh = 100
 					Totalco2perkwh = 200
-					// averageKwh = averageKwh + getCarbonIntensity(param)
+					averageKwh = averageKwh + getCarbonIntensity(param)
 
 					// Totalco2perkwh = Totalco2perkwh + ((getCarbonIntensity(param) * float64(GetWattage(qry))) / 1000)
 				}
@@ -67,6 +67,7 @@ func main() {
 }
 
 func getCarbonIntensity(param pa.TypCarbonQueryParams) float64 {
+	fmt.Println(param.IacLocation)
 	x := pa.LiveCarbonIntensity(param)
 	return x.LiveCarbonIntensity
 }
