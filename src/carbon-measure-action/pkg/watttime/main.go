@@ -127,7 +127,8 @@ func RealTimeEmissionsIndex(ba string, latitude float32, longitude float32, styl
 	if err != nil {
 		return nil, err
 	}
-
+	fmt.Println(&response)
+	fmt.Println(response)
 	return &response, nil
 }
 
