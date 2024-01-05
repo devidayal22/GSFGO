@@ -1,6 +1,7 @@
 package poweradapter
 
 import (
+	"fmt"
 	EM "main/pkg/electricitymap"
 	WT "main/pkg/watttime"
 	"strconv"
@@ -8,7 +9,7 @@ import (
 	time "time"
 )
 
-//RETURN
+// RETURN
 type CarbonIntensity struct {
 	LiveCarbonIntensity float64
 	History             []RecentCIHistory
@@ -19,7 +20,7 @@ type RecentCIHistory struct {
 	Datetime        string
 }
 
-//GET FROM
+// GET FROM
 type TypCarbonQueryParams struct {
 	IacProvider           string
 	IacLocation           string
@@ -54,7 +55,11 @@ func LiveCarbonIntensity(params TypCarbonQueryParams) (ci CarbonIntensity) {
 	} else if strings.ToLower(params.CarbonRateProvider) == "watttime" {
 
 		live, recent := Watttime(TypCarbonQueryParams{WattTimeUser: params.WattTimeUser, WattTimePass: params.WattTimePass}, zone)
-		ci.LiveCarbonIntensity, _ = strconv.ParseFloat(live.Moer, 64)
+		fmt.Println("devi dayal" + live.Moer)
+		if live != nil {
+			ci.LiveCarbonIntensity, _ = strconv.ParseFloat(live.Moer, 64)
+		}
+
 		if recent != nil {
 			var historyci []RecentCIHistory
 
