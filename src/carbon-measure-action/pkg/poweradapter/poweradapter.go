@@ -60,7 +60,11 @@ func LiveCarbonIntensity(params TypCarbonQueryParams) (ci CarbonIntensity) {
 		if live != nil {
 			ci.LiveCarbonIntensity, _ = strconv.ParseFloat(live.Moer, 64)
 			fmt.Println("ci.LiveCarbonIntensity")
-			fmt.Println(ci.LiveCarbonIntensity)
+			fmt.Println(live.Percent)
+			fmt.Println(live.BA)
+			fmt.Println(live.Moer)
+			fmt.Println(live.Percent)
+			fmt.Println(recent)
 		}
 
 		if recent != nil {
