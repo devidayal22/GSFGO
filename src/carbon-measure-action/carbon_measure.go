@@ -51,7 +51,7 @@ func main() {
 					Totalco2perkwh = 200
 					averageKwh = averageKwh + getCarbonIntensity(param)
 
-					// Totalco2perkwh = Totalco2perkwh + ((getCarbonIntensity(param) * float64(GetWattage(qry))) / 1000)
+					Totalco2perkwh = Totalco2perkwh + ((getCarbonIntensity(param) * float64(GetWattage(qry))) / 1000)
 				}
 			}
 		}
