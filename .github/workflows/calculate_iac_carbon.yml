@@ -15,7 +15,8 @@
               go env -w GO111MODULE=on
               go version && go env
         - id: carbon_output
-          uses: ./src/carbon-measure-action
+          # uses: ./src/carbon-measure-action
+          uses: Green-Software-Foundation/Carbon_CI_Pipeline_Tooling@Dev
           with:
             IACFile: $GITHUB_WORKSPACE/data/azuredeploy.json
             IACType: arm
