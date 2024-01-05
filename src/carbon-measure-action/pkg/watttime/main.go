@@ -98,7 +98,7 @@ func RealTimeEmissionsIndex(ba string, latitude float32, longitude float32, styl
 	header := make(map[string]string)
 
 	header["Authorization"] = "Bearer " + token
-	fmt.Println("devi dayal" + " RealTimeEmissionsIndex " + token)
+
 	query := make(map[string]string)
 	if ba != "" {
 		query["ba"] = ba
@@ -120,7 +120,9 @@ func RealTimeEmissionsIndex(ba string, latitude float32, longitude float32, styl
 		Query:    query,
 		Response: &response,
 	}
-
+	fmt.Println("devi dayal" + " RealTimeEmissionsIndex " + url)
+	fmt.Println(query)
+	fmt.Println(&response)
 	err := request.Send()
 	if err != nil {
 		return nil, err
