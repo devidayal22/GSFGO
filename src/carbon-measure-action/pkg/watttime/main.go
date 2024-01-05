@@ -33,6 +33,8 @@ func Login(username string, password string) error {
 	}
 
 	token = response.Token
+	fmt.Println("devi dayal" + " token " + token)
+
 	return nil
 }
 
