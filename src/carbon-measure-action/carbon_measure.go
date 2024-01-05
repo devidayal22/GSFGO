@@ -47,9 +47,11 @@ func main() {
 					qry.Provider = cloudProvider
 					qry.SizeName = S.Size
 					qry.Location = D.Location
-					averageKwh = averageKwh + getCarbonIntensity(param)
+					averageKwh = 100
+					Totalco2perkwh = 200
+					// averageKwh = averageKwh + getCarbonIntensity(param)
 
-					Totalco2perkwh = Totalco2perkwh + ((getCarbonIntensity(param) * float64(GetWattage(qry))) / 1000)
+					// Totalco2perkwh = Totalco2perkwh + ((getCarbonIntensity(param) * float64(GetWattage(qry))) / 1000)
 				}
 			}
 		}
