@@ -90,6 +90,7 @@ func Watttime(params TypCarbonQueryParams, BA string) (*WT.RealTimeEmissionsInde
 
 	live, _ := WT.RealTimeEmissionsIndex(BA, 0, 0, "")
 	recent, _ := WT.GridEmissionsData(BA, 0, 0, starttime, endtime, "", "")
-
+	fmt.Println(live)
+	fmt.Println(recent)
 	return live, recent
 }
