@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
-	pa "main/pkg/poweradapter"
 	iac "main/pkg/infraascode"
+	pa "main/pkg/poweradapter"
 	"os"
 	"strings"
 )
@@ -23,7 +23,7 @@ func main() {
 	var count int
 	var qry TypCloudResourceQuery
 
-	githubNoticeMessage("Starting carbon measure action.")
+	githubNoticeMessage("devidayal: Starting carbon measure action.")
 
 	// TODO: For terraform, we might need to accept a list of multiple files
 	var param pa.TypCarbonQueryParams
