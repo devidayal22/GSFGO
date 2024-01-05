@@ -1,4 +1,14 @@
-# Carbon_CI_Pipeline_Tooling
+### _[!important] Incubation Project : This project is an incubation project being run inside the Green Software Foundation; as such, we DON’T recommend using it in any critical use case. Incubation projects are experimental, offer no support guarantee, have minimal governance and process, and may be retired at any moment. This project may one day Graduate, in which case this disclaimer will be removed._
+
+
+# carbon_ci_pipeline_tooling
+
+> Calculate the carbon emissions of an application via static analysis of the code and any infrastructure as code files in a repository.
+
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+![GitHub issues](https://img.shields.io/github/issues/Green-Software-Foundation/Carbon_CI_Pipeline_Tooling)
+![GitHub](https://img.shields.io/github/license/Green-Software-Foundation/Carbon_CI_Pipeline_Tooling)
+![GitHub Repo stars](https://img.shields.io/github/stars/Green-Software-Foundation/Carbon_CI_Pipeline_Tooling?style=social)
 
 ## Scope
 
@@ -6,46 +16,45 @@ This project aims to build the capability to calculate the carbon emissions of a
 
 This tooling covers the pipeline from a git commit, up to deployment, in a typical continuous integration/continuous deployment process.
 
-## Appointments 
+Considered approaches include:
 
-- Fergus Kidd (Avanade)	
+1. A GitHub Action to run during deployment
+2. A GitHub Action to run on a pull request
+3. A Pre-commit application to run every time a commit is made
 
-## Projects
-- [Innovation WG](https://greensoftware.foundation/working-groups/innovation)
+## Appointments
 
-## Resources
+- Fergus Kidd (Avanade)
 
-* [Slack Channel](https://greensoftwarefdn.slack.com/archives/C038YRLD2NN) (Members Only)
+## Solutions Referenced
 
-## Getting Started
-Welcome to the Innovation Working Group.
+- [GitHub Actions for Azure](https://docs.microsoft.com/en-us/azure/developer/github/github-actions?WT.mc_id=AI-MVP-5004204)
+- [GitHub Actions for .NET](https://docs.microsoft.com/en-us/dotnet/devops/github-actions-overview?WT.mc_id=AI-MVP-5004204)
+- [Create a VM](https://docs.microsoft.com/en-us/azure/templates/microsoft.compute/virtualmachines?WT.mc_id=AI-MVP-5004204)
+- [Deploy an ARM template](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/deploy-portal?WT.mc_id=AI-MVP-5004204)
+- [Git Hooks](https://githooks.com/)
+- [Electricitymap API](https://static.electricitymap.org/api/docs/index.html)
+- [Creating a Docker Action](https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action)
 
-This working group is part of the Green Software Foundation. It is open to any member of the Foundation, for more details regarding the foundation and the application form to join please go to https://greensoftware.foundation.
+## Documentation
 
-- Make sure you have joined the GSF slack and have introduced yourself in the Innovatation slack channel.
-- We have weekly meetings over zoom, ensure you have access to the above meeting schedule.
-- Familiarize yourself with our scope above and take a look at our current projects in flight - links are above.
-- If you are having any problems with access please reach out to smcilroy@contractor.linuxfoundation.org  or helpdesk@greensoftware.io.
+Limited documentation has been created, as this is not yet an approved GSF deliverable. Further documentation will be added to the `docs` folder, along with setup instructions.
 
-## Copyright
-Innovation WG projects are copyrighted under [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/).
+## Working with the project
 
-## Patent
-No Patent License. No patent licenses are granted for the Draft Deliverables or Approved Deliverables developed by this Working Group.
+Contributions are welcome. See information on [contributing](./CONTRIBUTING.md).
 
-## License
-Innovation WG projects are licensed under the MIT License - see the [License.md](license/innovation-wg-license.md)file for details 
+If you're happy to follow these guidelines, then check out the [getting started](./docs/start-here.md) guide.
 
-## Dataset
-CDLA-Permissive-1.0
+This project is part of the Green Software Foundation. It is open to any member of the Foundation, for more details regarding the foundation and the application form to join please go to https://greensoftware.foundation.
 
-## Collaborating With the WG
+### Contributing and our ways of working
 
-1. Create a [new Issue](https://github.com/Green-Software-Foundation/standards_wg/issues/new)
-2. Discuss Issue with WG --> Create PR if required
+1. Create a [new Issue](https://github.com/Green-Software-Foundation/carbon_ci_pipeline_tooling/issues/new)
+2. Discuss Issue with group --> Create PR if required
 3. PR to be submitted against the **DEV feature branch**
-4. PR discussed with the WG. If agreed, the WG Chair will merge into **DEV Feature branch**
- 
+4. PR discussed with the group. If agreed, the chair and maintainer will merge into **DEV Feature branch**
+
 <figure>
 	<img src="images/single-trunk-branch.svg" alt="GSF Single-Trunk Based Branch Flow">
 	<figcaption></figcaption>
@@ -53,6 +62,26 @@ CDLA-Permissive-1.0
 
 5. See [The Way we Work](https://github.com/Green-Software-Foundation/standards_wg/blob/main/the_way_we_work.md) for futher details.
 
-## Help
-helpdesk@greensoftware.io
+## Resources
 
+- [Slack Channel](https://greensoftwarefdn.slack.com/archives/C038YRLD2NN) (Members Only)
+
+## Licensing
+
+carbon_ci_pipeline_tooling is available under the [MIT Licence](./LICENCE).
+
+## Copyright
+
+Open Source Innovation WG projects are copyrighted under [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/).
+
+## Patent
+
+No Patent License. No patent licenses are granted for the Draft Deliverables or Approved Deliverables developed by this Working Group.
+
+## Dataset
+
+CDLA-Permissive-1.0
+
+## Help
+
+carbon-ci@greensoftware.foundation  
