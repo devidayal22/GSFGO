@@ -48,7 +48,9 @@ func main() {
 					qry.SizeName = S.Size
 					qry.Location = D.Location
 					averageKwh = averageKwh + getCarbonIntensity(param)
-
+					fmt.Println(D.Location)
+					fmt.Println(ts.Resource)
+					fmt.Println(S.Size)
 					Totalco2perkwh = Totalco2perkwh + ((getCarbonIntensity(param) * float64(GetWattage(qry))) / 1000)
 				}
 			}
